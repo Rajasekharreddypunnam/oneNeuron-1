@@ -32,7 +32,7 @@ def save_model(model, filename):
     """
     logging.info("saving the trained model")
     model_dir = "models"
-    os.makedirs(model_dir, exist_ok=True)  # ONLY CREATE IF MODEL_DIR DOES NOT EXISTS
+    os.makedirs(model_dir, exist_ok=True)  # ONLY CREATE MODEL_DIR DOES NOT EXISTS
     filepath = os.path.join(model_dir, filename)  # model/filename
     joblib.dump(model, filepath)
     logging.info(f"saved the trained model {filepath}")
